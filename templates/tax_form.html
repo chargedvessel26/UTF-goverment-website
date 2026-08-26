@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Form T-101: Individual Income Tax Return - Republic of Penland
+    </title>
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        padding: 40px;
+        color: #000;
+      }
+      .header {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 22px;
+        text-transform: uppercase;
+      }
+      .header p {
+        margin: 5px 0 0;
+        font-size: 14px;
+      }
+      .section-title {
+        font-weight: bold;
+        background: #eee;
+        padding: 5px;
+        margin-top: 20px;
+        border: 1px solid #000;
+        font-size: 14px;
+      }
+      .field-group {
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      .field {
+        flex: 1;
+        margin-right: 15px;
+      }
+      .field label {
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .field-line {
+        border-bottom: 1px solid #000;
+        height: 25px;
+      }
+      .print-btn {
+        background: #002868;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+      @media print {
+        .print-btn {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="print-btn" onclick="window.print()">
+      🖨️ Print or Save as PDF
+    </button>
+
+    <div class="header">
+      <h1>Republic of Penland</h1>
+      <p>Internal Revenue Service — Ministry of Finance</p>
+      <h2>FORM T-101: INDIVIDUAL INCOME TAX DECLARATION</h2>
+      <p>Under Book III, Section 4 of the National Legal Code[cite: 1]</p>
+    </div>
+
+    <div class="section-title">SECTION 1: TAXPAYER IDENTIFICATION</div>
+    <div class="field-group">
+      <div class="field">
+        <label>Full Legal Name:</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="field">
+        <label>National Identity Number (NIN):</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+    <div class="field-group">
+      <div class="field">
+        <label>Residential Address:</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="field">
+        <label>Province / District:</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+
+    <div class="section-title">SECTION 2: INCOME DECLARATION</div>
+    <div class="field-group">
+      <div class="field">
+        <label>Gross Annual Wages / Salary:</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="field">
+        <label>Commercial / Investment Income:</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+
+    <div class="section-title">SECTION 3: DECLARATION & SIGNATURE</div>
+    <p style="font-size: 12px; margin-top: 15px">
+      I hereby swear under penalty of perjury that the information provided on
+      this tax declaration is true, accurate, and complete in accordance with
+      Penland law[cite: 1].
+    </p>
+
+    <div class="field-group" style="margin-top: 40px">
+      <div class="field">
+        <label>Taxpayer Signature:</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="field">
+        <label>Date (DD/MM/YYYY):</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+  </body>
+</html>

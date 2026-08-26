@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form P-10: Passport Application - Republic of Penland</title>
+    <style>
+      body {
+        font-family: "Times New Roman", serif;
+        padding: 40px;
+        color: #000;
+      }
+      .header {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 22px;
+        text-transform: uppercase;
+      }
+      .section-title {
+        font-weight: bold;
+        background: #eee;
+        padding: 5px;
+        margin-top: 20px;
+        border: 1px solid #000;
+        font-size: 14px;
+      }
+      .field-group {
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      .field {
+        flex: 1;
+        margin-right: 15px;
+      }
+      .field label {
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .field-line {
+        border-bottom: 1px solid #000;
+        height: 25px;
+      }
+      .print-btn {
+        background: #002868;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+      @media print {
+        .print-btn {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="print-btn" onclick="window.print()">
+      🖨️ Print or Save as PDF
+    </button>
+    <div class="header">
+      <h1>Republic of Penland</h1>
+      <p>Department of Immigration & National Identity</p>
+      <h2>FORM P-10: PASSPORT APPLICATION / RENEWAL</h2>
+      <p>Under Section Two, Article 1 of the Constitution[cite: 1]</p>
+    </div>
+    <div class="section-title">SECTION 1: APPLICANT IDENTIFICATION</div>
+    <div class="field-group">
+      <div class="field">
+        <label>Full Legal Name:</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="field">
+        <label>Date of Birth (DD/MM/YYYY):</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+    <div class="field-group">
+      <div class="field">
+        <label>Place of Birth:</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="field">
+        <label>National Identity Number (NIN):</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+    <div class="section-title">SECTION 2: TRAVEL DOCUMENT DETAILS</div>
+    <div class="field-group">
+      <div class="field">
+        <label>Application Type (New / Renewal / Lost):</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="field">
+        <label>Previous Passport No. (If applicable):</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+    <div class="section-title">SECTION 3: DECLARATION & SIGNATURE</div>
+    <p style="font-size: 12px">
+      I declare under penalty of perjury that I am a citizen of Penland and the
+      information stated is true[cite: 1].
+    </p>
+    <div class="field-group" style="margin-top: 40px">
+      <div class="field">
+        <label>Applicant Signature:</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="field">
+        <label>Date:</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+  </body>
+</html>

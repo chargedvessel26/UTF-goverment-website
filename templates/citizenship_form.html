@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Penland Citizenship Application Form (Form C-01)</title>
+    <style>
+      /* A4 Page Formatting Rules */
+      @page {
+        size: A4 portrait;
+        margin: 12mm;
+      }
+      body {
+        font-family: "Times New Roman", serif;
+        padding: 10px 20px;
+        color: #000;
+        line-height: 1.25;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .header {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 5px;
+        margin-bottom: 12px;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+      .header h2 {
+        margin: 2px 0 0;
+        font-size: 13px;
+        font-weight: normal;
+      }
+      .section-title {
+        font-weight: bold;
+        background: #eee;
+        padding: 3px 5px;
+        margin-top: 10px;
+        border: 1px solid #000;
+        font-size: 12px;
+      }
+      .field-group {
+        margin: 8px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      .field {
+        flex: 1;
+        margin-right: 12px;
+      }
+      .field:last-child {
+        margin-right: 0;
+      }
+      .field label {
+        display: block;
+        font-size: 11px;
+        font-weight: bold;
+        margin-bottom: 2px;
+      }
+      .field-line {
+        border-bottom: 1px solid #000;
+        min-height: 18px;
+      }
+      .checkbox-group {
+        margin: 6px 0;
+        font-size: 11px;
+      }
+      .declaration-text {
+        font-size: 10.5px;
+        margin-top: 6px;
+      }
+      .official-box {
+        border: 1.5px dashed #000;
+        padding: 8px 12px;
+        margin-top: 14px;
+        background-color: #fafafa;
+      }
+      .print-btn {
+        background: #002868;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 10px;
+        font-size: 12px;
+      }
+      @media print {
+        .print-btn {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="print-btn" onclick="window.print()">
+      🖨️ Print or Save as PDF (A4)
+    </button>
+
+    <div class="header">
+      <h1>Penland Citizenship Application Form (Form C-01)</h1>
+      <h2>Ministry of National Identity & Immigration (MINI)</h2>
+    </div>
+
+    <div class="section-title">SECTION 1: APPLICANT INFORMATION</div>
+
+    <div class="field-group">
+      <div class="field">
+        <label>Full Name:</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="field">
+        <label>Date of Birth (DD/MM/YYYY):</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="field">
+        <label>Place of Birth:</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="field">
+        <label>Current Nationality:</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="field">
+        <label>Address:</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="field">
+        <label>Email / Phone:</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="field">
+        <label>Reason for Applying for Penland Citizenship:</label>
+        <div class="field-line" style="min-height: 28px"></div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="field">
+        <label>Occupation / Primary Skills:</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+
+    <div class="checkbox-group">
+      <strong>Do you intend to reside in Penland full-time?</strong>
+      &nbsp;&nbsp; ☐ Yes &nbsp;&nbsp; ☐ No
+    </div>
+
+    <div class="checkbox-group">
+      <strong>Do you have dependents applying with you?</strong> &nbsp;&nbsp; ☐
+      Yes &nbsp;&nbsp; ☐ No
+    </div>
+    <div class="field-group">
+      <div class="field">
+        <label>If yes, list names:</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+
+    <div class="checkbox-group">
+      <strong>Have you ever been convicted of a serious offense?</strong>
+      &nbsp;&nbsp; ☐ Yes &nbsp;&nbsp; ☐ No
+    </div>
+    <div class="field-group">
+      <div class="field">
+        <label>If yes, provide details:</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+
+    <div class="section-title">SECTION 2: DECLARATION</div>
+    <p class="declaration-text">
+      I declare that all information provided is true and complete. I agree to
+      follow the laws of Penland and understand that false information may
+      result in denial of citizenship[cite: 2].
+    </p>
+
+    <div class="field-group" style="margin-top: 20px">
+      <div class="field">
+        <label>Signature:</label>
+        <div class="field-line"></div>
+      </div>
+      <div class="field">
+        <label>Date:</label>
+        <div class="field-line"></div>
+      </div>
+    </div>
+
+    <div class="official-box">
+      <strong style="font-size: 11px; text-transform: uppercase"
+        >For Official Use Only</strong
+      >
+      <div class="field-group" style="margin-top: 4px">
+        <div class="field">
+          <label>Application No.:</label>
+          <div class="field-line"></div>
+        </div>
+        <div class="field">
+          <label>Status:</label>
+          <div style="font-size: 11px; margin-top: 2px">
+            ☐ Approved &nbsp;&nbsp; ☐ Denied
+          </div>
+        </div>
+      </div>
+      <div class="field-group" style="margin-top: 4px">
+        <div class="field">
+          <label>Reviewed By:</label>
+          <div class="field-line"></div>
+        </div>
+        <div class="field">
+          <label>Notes:</label>
+          <div class="field-line"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

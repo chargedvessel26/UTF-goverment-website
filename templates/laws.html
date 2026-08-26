@@ -1,0 +1,3361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laws & Decrees | The Penland Government</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LINK TO YOUR CUSTOM CSS FILE -->
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Merriweather", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      .serif-text {
+        font-family: "Merriweather", serif;
+      }
+
+      /* Tab Styling using custom palette */
+      .tab-btn {
+        transition: all 0.2s ease-in-out;
+      }
+      .tab-btn.active {
+        border-bottom: 4px solid var(--neutral-highlight, #38bdf8);
+        color: var(--navy-deep, #071322);
+        font-weight: 700;
+        background-color: #f1f5f9;
+      }
+      .tab-content {
+        display: none;
+        animation: fadeIn 0.3s;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(5px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Document Formatting */
+      .legal-doc {
+        background: white;
+        padding: 3rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border-top: 8px solid var(--navy-deep, #071322);
+      }
+      .legal-section {
+        margin-top: 2.5rem;
+      }
+      .legal-section h3 {
+        border-bottom: 2px solid #e2e8f0;
+        padding-bottom: 0.5rem;
+        color: var(--navy-deep, #071322);
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: bold;
+      }
+      .legal-article {
+        margin-bottom: 2rem;
+      }
+      .legal-article h4 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #1e293b;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .legal-list li {
+        margin-bottom: 0.5rem;
+        color: #475569;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Top Accessibility Bar -->
+    <div
+      class="text-white text-xs py-2 px-6 flex justify-between items-center"
+      style="background-color: var(--navy-deep, #071322)"
+    >
+      <div class="space-x-4">
+        <span class="font-semibold"
+          >🏛️ An Official Website of the Penland Government</span
+        >
+      </div>
+      <div class="space-x-4 flex items-center">
+        <a href="#" class="hover:underline">High Contrast</a>
+        <a href="#" class="hover:underline">Language: EN</a>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header
+      class="sticky top-0 bg-white z-50 shadow-sm"
+      style="border-bottom: 4px solid var(--navy-deep, #071322)"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center"
+      >
+        <a href="/" class="flex items-center space-x-4">
+          <img
+            src="/static/Republic of penland seal.jpe"
+            alt="Official Seal of Penland"
+            class="w-14 h-14 object-contain"
+          />
+          <div class="flex flex-col">
+            <span
+              class="text-2xl font-bold uppercase tracking-widest serif-text"
+              style="color: var(--navy-deep, #071322)"
+              >Penland</span
+            >
+            <span
+              class="text-sm tracking-wider text-gray-600 uppercase font-semibold"
+              >Government</span
+            >
+          </div>
+        </a>
+        <nav
+          class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide"
+        >
+          <a
+            href="/"
+            class="transition-colors pb-1 text-gray-600 hover:text-black"
+            >Home</a
+          >
+          <a
+            href="/laws"
+            class="transition-colors pb-1"
+            style="
+              color: var(--navy-deep, #071322);
+              border-bottom: 2px solid var(--neutral-highlight, #38bdf8);
+            "
+            >Laws & Decrees</a
+          >
+          <a
+            href="/services"
+            class="transition-colors pb-1 text-gray-600 hover:text-black"
+            >Citizen Services</a
+          >
+          <a
+            href="/contact"
+            class="transition-colors pb-1 text-gray-600 hover:text-black"
+            >Contact Us</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section
+      class="text-white py-16 px-6 text-center shadow-lg"
+      style="
+        background-color: var(--navy-deep, #071322);
+        border-bottom: 8px solid var(--navy-accent, #112240);
+      "
+    >
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-md">
+        National Archives & Legal Code
+      </h1>
+      <p class="text-lg font-light text-gray-300 max-w-2xl mx-auto">
+        The foundational texts, rights, and legislative books governing the
+        free, sovereign, and independent Republic of Penland[cite: 1].
+      </p>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-6 py-12">
+      <!-- Tab Navigation Buttons -->
+      <div
+        class="flex flex-wrap border-b border-gray-300 mb-8 bg-white shadow-sm rounded-t-lg overflow-hidden"
+      >
+        <button
+          class="tab-btn active flex-1 py-4 px-6 text-sm font-semibold text-gray-600 hover:text-black focus:outline-none"
+          onclick="openTab(event, 'tab-const')"
+        >
+          Constitution
+        </button>
+        <button
+          class="tab-btn flex-1 py-4 px-6 text-sm font-semibold text-gray-600 hover:text-black focus:outline-none"
+          onclick="openTab(event, 'tab-book1')"
+        >
+          Book I: Public & Criminal
+        </button>
+        <button
+          class="tab-btn flex-1 py-4 px-6 text-sm font-semibold text-gray-600 hover:text-black focus:outline-none"
+          onclick="openTab(event, 'tab-book2')"
+        >
+          Book II: Civil & Personal
+        </button>
+        <button
+          class="tab-btn flex-1 py-4 px-6 text-sm font-semibold text-gray-600 hover:text-black focus:outline-none"
+          onclick="openTab(event, 'tab-book3')"
+        >
+          Book III: Economic
+        </button>
+      </div>
+
+      <!-- TAB 1: CONSTITUTION -->
+      <div id="tab-const" class="tab-content active legal-doc">
+        <div
+          class="text-center pb-8 mb-8"
+          style="border-bottom: 2px solid var(--navy-accent, #112240)"
+        >
+          <h2
+            class="text-3xl font-bold uppercase tracking-widest mb-4"
+            style="color: var(--navy-deep, #071322)"
+          >
+            Constitution of the Republic of Penland
+          </h2>
+          <p class="text-gray-700 italic">
+            Establishment of the Republic: The Republic of Penland is hereby
+            constituted as a free, sovereign, and independent nation founded
+            upon the principles of liberty, justice, and unity[cite: 1]. Its
+            authority derives from the will of the people and shall be exercised
+            in accordance with this Constitution[cite: 1].
+          </p>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section One - Structure of Government[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Executive Branch[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The Republic of Penland shall be governed by a President,
+                elected directly by the people through free and fair
+                elections[cite: 1].
+              </li>
+              <li>
+                The Vice President shall be appointed by the President upon
+                election and shall serve as the President's principal advisor
+                and successor in the event of incapacity, resignation, or
+                death[cite: 1].
+              </li>
+              <li>
+                The President shall serve as Head of State and Head of
+                Government, responsible for enforcing laws, directing national
+                policy, and representing Penland in international affairs[cite:
+                1].
+              </li>
+              <li>
+                The Vice President shall assist in the execution of executive
+                duties and preside over the Senate when required[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Legislative Branch[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Legislative authority shall reside in the Senate of Penland,
+                composed of the President, Vice President, and elected
+                Representatives[cite: 1].
+              </li>
+              <li>
+                Representatives shall be chosen proportionally to the number of
+                citizens[cite: 1].
+              </li>
+              <li>
+                The Senate shall have the power to propose, debate, and enact
+                laws; approve national budgets; and oversee the conduct of the
+                executive branch[cite: 1].
+              </li>
+              <li>
+                Decisions of the Senate shall be made by majority vote, except
+                where this Constitution requires a two thirds vote[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Balance of Power[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The President may veto legislation passed by the Senate, subject
+                to override by a two-thirds majority vote[cite: 1].
+              </li>
+              <li>
+                The Senate retains the authority to investigate executive
+                actions and hold public inquiries to ensure transparency and
+                accountability[cite: 1].
+              </li>
+              <li>
+                No branch of government shall exercise powers reserved to
+                another, preserving the independence and balance of the
+                Republic's institutions[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section Two - Rights and Freedoms of the People[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Fundamental Rights[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                All citizens of Penland are equal before the law and shall not
+                be discriminated against on the basis of origin, belief,
+                identity, or personal circumstance[cite: 1].
+              </li>
+              <li>
+                Every citizen has the right to life, liberty, and personal
+                security[cite: 1].
+              </li>
+              <li>
+                No citizen shall be deprived of their rights without due process
+                of law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Freedom of Expression[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Citizens have the right to express their thoughts, ideas, and
+                creativity freely, including through writing, art, and
+                communication[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Right to Representation[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Every citizen has the right to vote in national elections,
+                including the direct election of the President[cite: 1].
+              </li>
+              <li>
+                Citizens have the right to petition the Senate and participate
+                in public discourse regarding national policy[cite: 1].
+              </li>
+              <li>
+                Representation in the Senate shall be proportional to the number
+                of citizens in each district, ensuring fair and balanced
+                governance[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Privacy and Personal Autonomy[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Citizens have the right to privacy in their personal
+                communications, homes, and effects, except where lawful warrants
+                are issued[cite: 1].
+              </li>
+              <li>
+                Personal autonomy, including freedom of belief and lifestyle,
+                shall be respected so long as it does not infringe upon the
+                rights of others[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 5: Education and Knowledge[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Every citizen has the right to access education and information
+                necessary for personal development and civic participation[cite:
+                1].
+              </li>
+              <li>
+                The Republic shall promote literacy, creativity, and the pursuit
+                of knowledge as essential pillars of national progress[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 6: Protection and Security[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Citizens have the right to protection from harm, including
+                threats to their safety, wellbeing, or dignity[cite: 1].
+              </li>
+              <li>
+                The government shall maintain institutions dedicated to public
+                safety and national defense[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section Three - Judicial Branch[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Establishment of the Judiciary[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The judicial authority of the Republic of Penland shall be
+                vested in an independent National Court of Penland, hereafter
+                referred to as the Court[cite: 1].
+              </li>
+              <li>
+                The Court shall operate free from influence by the Executive and
+                Legislative branches, ensuring impartial interpretation and
+                application of the law[cite: 1].
+              </li>
+              <li>
+                The Court shall serve as the highest judicial body in the
+                Republic, with authority over constitutional matters, civil
+                disputes, criminal cases, and appeals[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Appointment of Judges[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Judges of the National Court shall be appointed by the President
+                and confirmed by a majority vote of the Senate[cite: 1].
+              </li>
+              <li>
+                Judges shall serve fixed terms established by law and may be
+                reappointed upon review of conduct, performance, and adherence
+                to constitutional principles[cite: 1].
+              </li>
+              <li>
+                Judges may be removed only through a formal impeachment process
+                conducted by the Senate in cases of misconduct, corruption, or
+                violation of constitutional duties[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Powers and Responsibilities[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The Court shall interpret the Constitution and ensure that all
+                laws, executive actions, and Senate decisions comply with its
+                provisions[cite: 1].
+              </li>
+              <li>
+                The Court shall have the authority to: Review and overturn laws
+                deemed unconstitutional; Resolve disputes between government
+                branches; Protect the rights and freedoms of citizens; Oversee
+                fair trials and due legal process[cite: 1].
+              </li>
+              <li>
+                Decisions of the Court shall be final and binding across the
+                Republic[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Temporary Executive Oversight[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                In the event that no judges of the National Court are available
+                to preside over urgent constitutional or legal matters,
+                temporary judicial authority shall be vested in the President
+                and Vice President acting jointly[cite: 1].
+              </li>
+              <li>
+                The President and Vice President shall exercise this authority
+                solely until qualified judges are available to resume their
+                duties[cite: 1].
+              </li>
+              <li>
+                Executive oversight of the Court shall be limited to essential
+                decisions necessary to maintain legal order and shall not extend
+                to long-term judicial functions[cite: 1].
+              </li>
+              <li>
+                All decisions made under temporary executive oversight shall be
+                subject to review by the Court once judges return to
+                service[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 5: Lower Courts[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The Senate may establish lower courts as necessary to manage
+                regional or specialized legal matters[cite: 1].
+              </li>
+              <li>
+                Lower courts shall operate under the guidance and oversight of
+                the National Court to ensure consistency in legal
+                interpretation[cite: 1].
+              </li>
+              <li>
+                Appeals from lower courts may be brought before the National
+                Court according to procedures established by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 6: Due Process and Fair Trial[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                All citizens shall have the right to a fair, timely, and
+                impartial trial[cite: 1].
+              </li>
+              <li>
+                No citizen shall be detained, charged, or punished without
+                lawful cause and proper judicial procedure[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section Four - Elections and Democratic Government[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: National Elections[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                All national elections of the Republic of Penland shall be
+                conducted freely, fairly, and transparently[cite: 1].
+              </li>
+              <li>
+                Every eligible citizen shall have the right to participate in
+                national elections without intimidation, discrimination, or
+                unlawful interference[cite: 1].
+              </li>
+              <li>
+                Elections shall be administered by an independent Electoral
+                Commission established by the Senate[cite: 1].
+              </li>
+              <li>
+                The Electoral Commission shall be responsible for maintaining
+                electoral registers, establishing voting procedures, overseeing
+                elections, and certifying official results[cite: 1].
+              </li>
+              <li>
+                The government shall take reasonable measures to ensure that
+                elections are accessible to all eligible citizens[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Election of the President[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The President shall be elected directly by the citizens of
+                Penland[cite: 1].
+              </li>
+              <li>
+                A presidential election shall be held at regular intervals
+                established by law[cite: 1].
+              </li>
+              <li>
+                A candidate shall assume the office of President upon receiving
+                the required majority of votes as established by electoral
+                law[cite: 1].
+              </li>
+              <li>
+                If no candidate receives the required majority, a second-round
+                election shall be held between the leading candidates according
+                to procedures established by law[cite: 1].
+              </li>
+              <li>
+                The President shall serve a term of four years and may seek
+                re-election, subject to any limits established by this
+                Constitution[cite: 1].
+              </li>
+              <li>
+                No person shall hold the office of President unless they meet
+                the qualifications established by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Election of Representatives[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Representatives of the Senate shall be elected by the citizens
+                of their respective districts[cite: 1].
+              </li>
+              <li>
+                Representation shall be determined proportionally according to
+                the population of each district[cite: 1].
+              </li>
+              <li>
+                Electoral districts shall be reviewed periodically to ensure
+                that representation remains fair and reflects changes in
+                population[cite: 1].
+              </li>
+              <li>
+                Elections for Representatives shall be conducted through secret
+                ballot[cite: 1].
+              </li>
+              <li>
+                Representatives shall serve terms established by law and may
+                seek re-election[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Political Participation[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Citizens shall have the right to peacefully form or join
+                political parties, organizations, and movements[cite: 1].
+              </li>
+              <li>
+                Political parties may nominate candidates for public office and
+                participate in national elections[cite: 1].
+              </li>
+              <li>
+                No political party shall be permitted to use violence,
+                intimidation, or unlawful means to obtain political power[cite:
+                1].
+              </li>
+              <li>
+                Political parties shall respect the Constitution, the rule of
+                law, and the rights of citizens[cite: 1].
+              </li>
+              <li>
+                The Senate may establish reasonable laws governing campaign
+                financing, political advertising, and election conduct to
+                protect the fairness and integrity of elections[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 5: Electoral Integrity[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                All votes shall be counted accurately and transparently[cite:
+                1].
+              </li>
+              <li>
+                Candidates and political parties shall have the right to observe
+                or appoint representatives to observe the counting of
+                votes[cite: 1].
+              </li>
+              <li>
+                Any citizen or candidate may challenge an election result
+                through procedures established by law[cite: 1].
+              </li>
+              <li>
+                Electoral disputes shall be resolved by an independent judicial
+                authority[cite: 1].
+              </li>
+              <li>
+                Any person who knowingly interferes with, falsifies, destroys,
+                or unlawfully manipulates an election shall be subject to
+                penalties established by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 6: Terms of Office[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The terms of elected officials shall begin and end according to
+                procedures established by this Constitution and the laws of
+                Penland[cite: 1].
+              </li>
+              <li>
+                No elected official shall remain in office beyond six years in
+                the length of one term[cite: 1].
+              </li>
+              <li>
+                Public officials shall continue to exercise their duties only
+                until their lawful successors are appointed or elected[cite: 1].
+              </li>
+              <li>
+                All elected officials shall swear an oath to uphold and defend
+                the Constitution of the Republic of Penland[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 7: Presidential Succession[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                If the President dies, resigns, is removed from office, or
+                becomes permanently incapable of performing the duties of the
+                office, the Vice President shall assume the office of
+                President[cite: 1].
+              </li>
+              <li>
+                If both the President and Vice President are unable to serve,
+                the Senate shall designate an acting President according to
+                procedures established by law[cite: 1].
+              </li>
+              <li>
+                An acting President shall possess only those powers necessary to
+                maintain the lawful operation of the government until a new
+                President can be elected or otherwise constitutionally
+                appointed[cite: 1].
+              </li>
+              <li>
+                A special presidential election shall be held when required by
+                law following a permanent vacancy in the presidency[cite: 1].
+              </li>
+              <li>
+                No temporary successor shall use the powers of the office to
+                unlawfully extend their own tenure or prevent a constitutionally
+                required election[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 8: Removal from Public Office[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Any elected official who commits serious misconduct, corruption,
+                abuse of power, or violation of the Constitution may be subject
+                to removal from office[cite: 1].
+              </li>
+              <li>
+                The Senate shall have the authority to conduct impeachment
+                proceedings against the President, Vice President,
+                Representatives, and other officials as established by law[cite:
+                1].
+              </li>
+              <li>
+                No official shall be removed through impeachment without a fair
+                hearing and an opportunity to respond to the allegations[cite:
+                1].
+              </li>
+              <li>
+                A conviction in impeachment proceedings shall require the
+                constitutional majority established by law[cite: 1].
+              </li>
+              <li>
+                Removal from office shall not prevent the individual from being
+                subject to criminal or civil proceedings where applicable[cite:
+                1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 9: Peaceful Transfer of Power[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The transfer of governmental authority following an election
+                shall occur peacefully and in accordance with the
+                Constitution[cite: 1].
+              </li>
+              <li>
+                Every outgoing administration shall cooperate with the lawful
+                incoming administration to ensure continuity of government[cite:
+                1].
+              </li>
+              <li>
+                No elected official or government institution shall unlawfully
+                prevent a duly elected successor from assuming office[cite: 1].
+              </li>
+              <li>
+                The armed forces, police, and other institutions of the Republic
+                shall remain subject to the Constitution and the lawful civilian
+                government[cite: 1].
+              </li>
+              <li>
+                The legitimacy of government shall derive from the Constitution
+                and the consent of the people of Penland[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section Five - Criminal Justice[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Principles of Criminal Justice[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The criminal justice system of the Republic of Penland shall
+                uphold the principles of justice, fairness, accountability, and
+                the rule of law[cite: 1].
+              </li>
+              <li>
+                No person shall be convicted of a criminal offence unless their
+                guilt has been established through lawful judicial
+                proceedings[cite: 1].
+              </li>
+              <li>
+                Every person accused of a crime shall be presumed innocent until
+                proven guilty[cite: 1].
+              </li>
+              <li>
+                Criminal laws shall apply equally to all persons, regardless of
+                position, wealth, status, or public office[cite: 1].
+              </li>
+              <li>
+                No person shall be punished for an act that was not a criminal
+                offence under the law at the time it was committed[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Arrest and Detention[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                No person shall be arrested or detained without lawful
+                cause[cite: 1].
+              </li>
+              <li>
+                A person who is arrested shall be informed of the reason for
+                their arrest as soon as reasonably practicable[cite: 1].
+              </li>
+              <li>
+                Every arrested person shall have the right to contact legal
+                representation and a person of their choosing, subject to
+                reasonable limitations established by law[cite: 1].
+              </li>
+              <li>
+                No person shall be held indefinitely without being brought
+                before a competent judicial authority[cite: 1].
+              </li>
+              <li>
+                The government shall establish lawful procedures governing
+                arrests, detention, bail, and pre-trial custody[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Search and Seizure[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Citizens shall be protected against unreasonable searches of
+                their persons, homes, communications, and property[cite: 1].
+              </li>
+              <li>
+                Searches and seizures shall generally require a warrant issued
+                by a competent judicial authority[cite: 1].
+              </li>
+              <li>
+                A warrant shall identify the place to be searched, the property
+                or information sought, and the lawful grounds for the
+                search[cite: 1].
+              </li>
+              <li>
+                Exceptions may be permitted in urgent circumstances where
+                obtaining a warrant would risk serious harm, the destruction of
+                evidence, or the escape of a suspect, as established by
+                law[cite: 1].
+              </li>
+              <li>
+                Evidence obtained unlawfully may be excluded from criminal
+                proceedings according to procedures established by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Right to a Fair Trial[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Every person accused of a criminal offence shall have the right
+                to a fair, public, and impartial trial within a reasonable
+                period[cite: 1].
+              </li>
+              <li>
+                The accused shall have the right to know the charges brought
+                against them[cite: 1].
+              </li>
+              <li>
+                The accused shall have the right to legal representation[cite:
+                1].
+              </li>
+              <li>
+                A person who cannot reasonably afford legal representation shall
+                be provided with legal assistance according to procedures
+                established by law[cite: 1].
+              </li>
+              <li>
+                The accused shall have the right to present evidence, question
+                witnesses, and challenge evidence presented against them[cite:
+                1].
+              </li>
+              <li>
+                No person shall be compelled to provide testimony that would
+                directly establish their own guilt[cite: 1].
+              </li>
+              <li>
+                Criminal convictions shall require sufficient evidence to
+                establish guilt according to the standard established by
+                law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 5: Punishment and Sentencing[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Criminal penalties shall be established by law and shall be
+                proportionate to the seriousness of the offence[cite: 1].
+              </li>
+              <li>
+                No punishment shall be cruel, degrading, or unnecessarily
+                severe[cite: 1].
+              </li>
+              <li>
+                The law may establish imprisonment, fines, community service,
+                rehabilitation programs, or other lawful penalties[cite: 1].
+              </li>
+              <li>
+                Sentencing shall take into account the circumstances and
+                seriousness of the offence, while ensuring equal application of
+                the law[cite: 1].
+              </li>
+              <li>
+                The death penalty shall not be imposed unless expressly
+                authorized by this Constitution and established by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 6: Rights of Victims[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Victims of crime shall have the right to protection, dignity,
+                and fair treatment throughout criminal proceedings[cite: 1].
+              </li>
+              <li>
+                Victims shall be provided with reasonable access to information
+                concerning proceedings involving their case[cite: 1].
+              </li>
+              <li>
+                The government shall establish programs to assist victims of
+                serious crime[cite: 1].
+              </li>
+              <li>
+                Victims shall have the right to provide statements to the Court
+                regarding the impact of an offence, subject to procedures
+                established by law[cite: 1].
+              </li>
+              <li>
+                Nothing in this Article shall diminish the rights of an accused
+                person to a fair trial[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 7: Law Enforcement[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Law enforcement agencies shall operate under the authority of
+                the Constitution and the laws of Penland[cite: 1].
+              </li>
+              <li>
+                Law enforcement officers shall exercise their powers lawfully,
+                reasonably, and proportionately[cite: 1].
+              </li>
+              <li>
+                No law enforcement officer shall use unnecessary or excessive
+                force against any person[cite: 1].
+              </li>
+              <li>
+                Law enforcement agencies shall be accountable to appropriate
+                civilian authorities and shall be subject to independent
+                oversight[cite: 1].
+              </li>
+              <li>
+                The government shall establish procedures for investigating
+                allegations of misconduct or unlawful conduct by law enforcement
+                officers[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 8: Rehabilitation and Corrections[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The correctional system shall protect the public while promoting
+                rehabilitation and the lawful reintegration of offenders into
+                society[cite: 1].
+              </li>
+              <li>
+                Persons deprived of their liberty shall retain all rights not
+                lawfully removed by their sentence[cite: 1].
+              </li>
+              <li>
+                Prisoners shall be treated humanely and shall not be subjected
+                to torture or cruel, degrading, or inhumane treatment[cite: 1].
+              </li>
+              <li>
+                The government shall provide reasonable access to healthcare,
+                education, and rehabilitation programs within correctional
+                institutions[cite: 1].
+              </li>
+              <li>
+                The conditions and administration of correctional institutions
+                shall be subject to lawful inspection and independent
+                oversight[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 9: Appeals and Review[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A person convicted of a criminal offence shall have the right to
+                appeal their conviction or sentence according to procedures
+                established by law[cite: 1].
+              </li>
+              <li>
+                The National Court shall have authority to hear appeals from
+                lower courts as provided by law[cite: 1].
+              </li>
+              <li>
+                A conviction may be overturned where significant legal error,
+                procedural unfairness, newly discovered evidence, or other
+                grounds established by law demonstrate that justice has not been
+                served[cite: 1].
+              </li>
+              <li>
+                The government shall establish procedures for reviewing cases in
+                which a person may have been wrongfully convicted[cite: 1].
+              </li>
+              <li>
+                No person shall be punished for exercising their lawful right to
+                appeal[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 10: Protection Against Double Jeopardy[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                No person shall be tried or punished more than once for the same
+                criminal offence after a final acquittal or conviction, except
+                where a retrial is expressly permitted by law in exceptional
+                circumstances[cite: 1].
+              </li>
+              <li>
+                A person acquitted of a criminal offence shall not be prosecuted
+                again for the same offence solely because the government
+                disagrees with the outcome[cite: 1].
+              </li>
+              <li>
+                Nothing in this Article shall prevent separate proceedings for
+                distinct offences arising from the same conduct where permitted
+                by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 2: BOOK I -->
+      <div id="tab-book1" class="tab-content legal-doc">
+        <div
+          class="text-center pb-8 mb-8"
+          style="border-bottom: 2px solid var(--navy-accent, #112240)"
+        >
+          <h2
+            class="text-3xl font-bold uppercase tracking-widest mb-4"
+            style="color: var(--navy-deep, #071322)"
+          >
+            Book I - Public & Criminal Law[cite: 1]
+          </h2>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 1: General Principles[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Purpose and Application of Law[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                This Book establishes the laws governing public authority,
+                public order, criminal offences, criminal justice, law
+                enforcement, and national security within the Republic of
+                Penland[cite: 1].
+              </li>
+              <li>
+                All persons and institutions subject to the jurisdiction of
+                Penland shall comply with the Constitution and laws of the
+                Republic[cite: 1].
+              </li>
+              <li>
+                The provisions of this Book shall be interpreted consistently
+                with the Constitution of Penland[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Equality Before the Law[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                All persons within the jurisdiction of the Republic of Penland
+                are equal before the law[cite: 1].
+              </li>
+              <li>
+                No person shall receive unlawful privilege or disadvantage in
+                the application of criminal or public law[cite: 1].
+              </li>
+              <li>
+                Public officials shall be subject to the same laws as other
+                persons, except where the Constitution or law expressly provides
+                otherwise[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Rule of Law[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Government authority shall be exercised only according to the
+                Constitution and laws of Penland[cite: 1].
+              </li>
+              <li>
+                No public institution or official shall exercise powers that
+                have not been granted by the Constitution or by law[cite: 1].
+              </li>
+              <li>
+                Government decisions and actions shall be subject to lawful
+                review and accountability[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 2: Criminal Responsibility[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Principle of Legality[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                No person shall be convicted of a criminal offence unless the
+                act was prohibited by law at the time it was committed[cite: 1].
+              </li>
+              <li>
+                No criminal penalty shall be imposed unless authorized by
+                law[cite: 1].
+              </li>
+              <li>
+                Criminal laws shall not be applied retroactively to the
+                disadvantage of an accused person[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Individual Responsibility[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A person shall be criminally responsible only for their own
+                unlawful actions or omissions, except where law expressly
+                establishes responsibility for participation in an offence[cite:
+                1].
+              </li>
+              <li>
+                No person shall be criminally responsible solely because of
+                their association with another person[cite: 1].
+              </li>
+              <li>
+                Criminal responsibility shall be determined according to the
+                circumstances and intent required for the particular
+                offence[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Presumption of Innocence[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Every person accused of a criminal offence shall be presumed
+                innocent until proven guilty by a competent court[cite: 1].
+              </li>
+              <li>
+                The burden of proving guilt shall rest upon the
+                prosecution[cite: 1].
+              </li>
+              <li>
+                No person shall be required to prove their own innocence[cite:
+                1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 3: Application of Criminal Law[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Territorial Application[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The criminal laws of Penland shall apply to offences committed
+                within the territory of the Republic[cite: 1].
+              </li>
+              <li>
+                Criminal law may also apply to conduct occurring outside Penland
+                where expressly authorized by law or where the offence directly
+                affects the security or lawful interests of the Republic[cite:
+                1].
+              </li>
+              <li>
+                Penland may cooperate with foreign governments and international
+                authorities in the investigation and prosecution of
+                offences[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Persons Subject to the Law[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                All persons within the jurisdiction of Penland shall be subject
+                to its criminal laws[cite: 1].
+              </li>
+              <li>
+                Foreign nationals shall be subject to Penland's laws while
+                within its jurisdiction, except where international law or a
+                lawful treaty provides otherwise[cite: 1].
+              </li>
+              <li>
+                Public officials and members of government shall remain subject
+                to criminal law[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 4 - Public Authority[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Lawful Exercise of Power[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Public authorities shall exercise their powers only for lawful
+                purposes[cite: 1].
+              </li>
+              <li>
+                Public powers shall be exercised reasonably and proportionately
+                to the purpose for which they were granted[cite: 1].
+              </li>
+              <li>
+                Public officials who knowingly abuse their authority may be
+                subject to disciplinary, civil, or criminal proceedings as
+                provided by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Accountability of Public Officials[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Public officials shall be accountable for the lawful exercise of
+                their duties[cite: 1].
+              </li>
+              <li>
+                No public office shall place a person above the law[cite: 1].
+              </li>
+              <li>
+                The Republic shall maintain procedures for investigating and
+                addressing misconduct by public officials[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Constitutional Supremacy[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                No provision of this Book shall be interpreted as permitting an
+                action prohibited by the Constitution of Penland[cite: 1].
+              </li>
+              <li>
+                Where a provision of this Book conflicts with the Constitution,
+                the Constitution shall prevail[cite: 1].
+              </li>
+              <li>
+                Any law or regulation found to be unconstitutional may be
+                invalidated by the National Court according to the
+                Constitution[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 5: Law Enforcement[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Establishment of Law Enforcement[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The Republic of Penland shall maintain law enforcement agencies
+                responsible for protecting the public, preventing crime,
+                enforcing the law, and maintaining public order[cite: 1].
+              </li>
+              <li>
+                Law enforcement agencies shall operate under civilian authority
+                and in accordance with the Constitution and laws of
+                Penland[cite: 1].
+              </li>
+              <li>
+                The organization, powers, responsibilities, and oversight of law
+                enforcement agencies shall be established by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Duties of Law Enforcement[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Law enforcement officers shall protect the lives, safety, and
+                lawful rights of persons within Penland[cite: 1].
+              </li>
+              <li>
+                Officers shall investigate suspected criminal offences and bring
+                persons suspected of offences before the appropriate judicial
+                authorities[cite: 1].
+              </li>
+              <li>
+                Law enforcement officers shall act impartially and shall not
+                enforce the law on the basis of unlawful discrimination[cite:
+                1].
+              </li>
+              <li>
+                Officers shall use only such force as is reasonably necessary to
+                perform their lawful duties[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Police Powers[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Law enforcement officers may exercise powers of arrest, search,
+                seizure, investigation, and detention only as authorized by
+                law[cite: 1].
+              </li>
+              <li>
+                A person shall not be arrested without lawful grounds[cite: 1].
+              </li>
+              <li>
+                Searches of persons, homes, vehicles, property, or private
+                communications shall be conducted according to the requirements
+                established by the Constitution and law[cite: 1].
+              </li>
+              <li>
+                The exercise of police powers shall be subject to judicial or
+                independent oversight as provided by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Law Enforcement Accountability[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Law enforcement agencies shall maintain procedures for receiving
+                and investigating complaints against officers[cite: 1].
+              </li>
+              <li>
+                Serious allegations of unlawful conduct or excessive use of
+                force shall be subject to independent investigation[cite: 1].
+              </li>
+              <li>
+                Officers who knowingly abuse their authority may be subject to
+                disciplinary, civil, or criminal proceedings[cite: 1].
+              </li>
+              <li>
+                No law enforcement officer shall be exempt from the law by
+                reason of their office[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 6: Criminal Offences[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Classification of Offences[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Criminal offences shall be classified according to their
+                seriousness and shall carry penalties established by law[cite:
+                1].
+              </li>
+              <li>
+                The law may distinguish between major offences, minor offences,
+                and regulatory offences[cite: 1].
+              </li>
+              <li>
+                No conduct shall constitute a criminal offence unless prohibited
+                by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Offences Against Persons[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The law shall prohibit acts that unlawfully cause or attempt to
+                cause death, serious injury, or harm to another person[cite: 1].
+              </li>
+              <li>
+                Such offences may include murder, manslaughter, assault,
+                kidnapping, unlawful confinement, and other offences established
+                by law[cite: 1].
+              </li>
+              <li>
+                The seriousness of an offence and its circumstances shall be
+                considered when determining the applicable penalty[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Property Offences[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The law shall prohibit the unlawful taking, destruction, damage,
+                or interference with another person's property[cite: 1].
+              </li>
+              <li>
+                Such offences may include theft, robbery, burglary, fraud,
+                vandalism, and unlawful possession of stolen property[cite: 1].
+              </li>
+              <li>
+                Penalties may take into account the value of property involved
+                and the circumstances of the offence[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Offences Against Public Order[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                No person shall unlawfully threaten public safety or
+                substantially disrupt the lawful operation of public
+                institutions or communities[cite: 1].
+              </li>
+              <li>
+                The law may establish offences relating to rioting, unlawful
+                violence, obstruction of public services, and other serious
+                disturbances of public order[cite: 1].
+              </li>
+              <li>
+                Peaceful expression, protest, assembly, and political activity
+                shall not constitute criminal offences solely because they
+                criticize the government or its policies[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 5: Offences Against Public Administration[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The law shall prohibit corruption, bribery, embezzlement, abuse
+                of public office, and unlawful interference with public
+                institutions[cite: 1].
+              </li>
+              <li>
+                Public officials who use their position for unlawful personal
+                benefit may be subject to increased penalties as established by
+                law[cite: 1].
+              </li>
+              <li>
+                A person who knowingly offers an unlawful benefit to a public
+                official may also be subject to criminal liability[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 6: Organized and Cybercrime[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The law may establish offences relating to organized criminal
+                activity, criminal enterprises, and participation in organized
+                crime[cite: 1].
+              </li>
+              <li>
+                Unauthorized access to protected computer systems, serious
+                computer fraud, unlawful interference with computer systems, and
+                other serious cyber offences shall be punishable by law[cite:
+                1].
+              </li>
+              <li>
+                Penalties for organized and cybercrime shall reflect the
+                seriousness and scale of the conduct[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 7: Criminal Procedure[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Criminal Investigations[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Criminal investigations shall be conducted according to law and
+                under appropriate judicial or independent oversight[cite: 1].
+              </li>
+              <li>
+                Investigators shall collect and preserve evidence fairly and
+                shall not knowingly conceal evidence relevant to the innocence
+                of an accused person[cite: 1].
+              </li>
+              <li>
+                Investigative powers shall be exercised only for legitimate law
+                enforcement purposes[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Arrest and Charges[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A person arrested for a suspected offence shall be informed of
+                the reason for their arrest[cite: 1].
+              </li>
+              <li>
+                An arrested person shall be brought before a judicial authority
+                within the period established by law[cite: 1].
+              </li>
+              <li>
+                The prosecution shall determine whether sufficient grounds exist
+                to formally charge a person with an offence[cite: 1].
+              </li>
+              <li>
+                A person shall not be detained indefinitely without lawful
+                judicial authorization[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Bail and Pre-Trial Detention[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A person accused of an offence shall generally have the
+                opportunity to seek release on bail or other lawful
+                conditions[cite: 1].
+              </li>
+              <li>
+                A court may order pre-trial detention where there are reasonable
+                grounds to believe that the accused may flee, interfere with the
+                administration of justice, threaten public safety, or otherwise
+                obstruct legal proceedings[cite: 1].
+              </li>
+              <li>
+                The conditions of bail and pre-trial detention shall be
+                established by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Evidence[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Evidence presented in criminal proceedings shall be obtained and
+                handled according to lawful procedures[cite: 1].
+              </li>
+              <li>
+                The prosecution and defense shall have reasonable opportunities
+                to challenge evidence presented by the opposing party[cite: 1].
+              </li>
+              <li>
+                Evidence obtained through serious violations of constitutional
+                or legal protections may be excluded according to procedures
+                established by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 5: Right to Legal Representation[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Every accused person shall have the right to legal
+                representation[cite: 1].
+              </li>
+              <li>
+                A person unable to reasonably afford legal representation shall
+                be provided with legal assistance according to procedures
+                established by law[cite: 1].
+              </li>
+              <li>
+                No person shall be denied a fair trial solely because they
+                cannot afford a lawyer[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 8: Courts and Sentencing[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Criminal Courts[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Criminal cases shall be heard by courts established under the
+                Constitution and laws of Penland[cite: 1].
+              </li>
+              <li>
+                Courts shall remain independent from law enforcement agencies
+                and the political branches of government[cite: 1].
+              </li>
+              <li>
+                Every criminal proceeding shall be conducted fairly and
+                impartially[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Trial and Conviction[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                An accused person shall be presumed innocent until proven
+                guilty[cite: 1].
+              </li>
+              <li>
+                The prosecution shall bear the burden of proving the accused's
+                guilt[cite: 1].
+              </li>
+              <li>
+                A conviction shall require the level of proof established by
+                law[cite: 1].
+              </li>
+              <li>
+                No person shall be convicted solely on the basis of unlawful
+                discrimination, political belief, or protected expression[cite:
+                1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Sentencing[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Criminal penalties shall be established by law before the
+                offence is committed[cite: 1].
+              </li>
+              <li>
+                Sentences shall be proportionate to the seriousness of the
+                offence[cite: 1].
+              </li>
+              <li>
+                Courts may consider the circumstances of the offence, the harm
+                caused, and relevant circumstances of the offender when
+                determining a sentence[cite: 1].
+              </li>
+              <li>
+                Permitted penalties may include imprisonment, fines, community
+                service, rehabilitation, or other penalties established by
+                law[cite: 1].
+              </li>
+              <li>
+                No sentence shall violate the constitutional rights of the
+                convicted person[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Appeals[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A person convicted of a criminal offence shall have the right to
+                appeal according to procedures established by law[cite: 1].
+              </li>
+              <li>
+                Appeals may challenge a conviction, sentence, or significant
+                legal or procedural error[cite: 1].
+              </li>
+              <li>
+                Higher courts may uphold, modify, or overturn decisions of lower
+                courts according to law[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 9: Corrections and Rehabilitation[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Correctional Institutions[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The Republic shall maintain correctional institutions for
+                persons lawfully sentenced to imprisonment[cite: 1].
+              </li>
+              <li>
+                Correctional institutions shall be operated according to law and
+                subject to appropriate governmental and independent
+                oversight[cite: 1].
+              </li>
+              <li>
+                Persons imprisoned by the state shall retain all rights not
+                lawfully removed by their sentence[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Treatment of Prisoners[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                No prisoner shall be subjected to torture or cruel, degrading,
+                or inhumane treatment[cite: 1].
+              </li>
+              <li>
+                Prisoners shall be provided with reasonable access to food,
+                water, sanitation, healthcare, and safe living conditions[cite:
+                1].
+              </li>
+              <li>
+                Prison authorities shall take reasonable measures to protect
+                prisoners from violence and abuse[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Rehabilitation[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The correctional system shall seek to reduce reoffending and
+                support the lawful reintegration of offenders into society[cite:
+                1].
+              </li>
+              <li>
+                Correctional institutions may provide education, vocational
+                training, counseling, and rehabilitation programs[cite: 1].
+              </li>
+              <li>
+                The government may establish supervised release, parole, and
+                other programs for eligible prisoners[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Juvenile Offenders[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The justice system shall recognize the special circumstances and
+                developmental needs of persons who commit offences while under
+                the age established by law[cite: 1].
+              </li>
+              <li>
+                Juvenile offenders shall, where appropriate, be provided with
+                rehabilitation and educational programs rather than adult
+                criminal penalties[cite: 1].
+              </li>
+              <li>
+                Children shall not be detained or imprisoned except where
+                permitted by law and where necessary for public safety[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 10: National Security and Emergency Powers[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: National Security[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The Republic shall maintain institutions responsible for
+                protecting its sovereignty, territorial integrity,
+                constitutional order, and national security[cite: 1].
+              </li>
+              <li>
+                National security institutions shall operate under civilian
+                authority and remain subject to the Constitution and laws of
+                Penland[cite: 1].
+              </li>
+              <li>
+                National security shall not be used as a justification for
+                unlawful discrimination or the arbitrary removal of
+                constitutional rights[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Armed Forces[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The Republic may maintain armed forces for the defense of
+                Penland and its people[cite: 1].
+              </li>
+              <li>
+                The armed forces shall remain subject to the authority of the
+                civilian government established by the Constitution[cite: 1].
+              </li>
+              <li>
+                Members of the armed forces shall be required to obey lawful
+                orders and shall not be required to obey orders that are
+                manifestly unlawful[cite: 1].
+              </li>
+              <li>
+                The organization and administration of the armed forces shall be
+                established by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Declaration of a State of Emergency[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A state of emergency may be declared only where a serious threat
+                to the safety, security, or constitutional order of Penland
+                exists[cite: 1].
+              </li>
+              <li>
+                The President may declare a state of emergency in accordance
+                with procedures established by the Constitution and law[cite:
+                1].
+              </li>
+              <li>
+                A declaration of emergency shall identify the nature of the
+                emergency and the powers being exercised in response[cite: 1].
+              </li>
+              <li>
+                Emergency powers shall be limited to what is reasonably
+                necessary to address the emergency[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Legislative and Judicial Oversight[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A state of emergency shall be subject to review by the
+                Senate[cite: 1].
+              </li>
+              <li>
+                The Senate may terminate an emergency declaration according to
+                procedures established by law[cite: 1].
+              </li>
+              <li>
+                The National Court shall retain authority to review the legality
+                of actions taken under emergency powers[cite: 1].
+              </li>
+              <li>
+                Emergency powers shall not permit the government to permanently
+                alter the Constitution or abolish the lawful institutions of the
+                Republic[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 5: Protection of Rights During Emergencies[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The existence of a state of emergency shall not suspend the
+                Constitution[cite: 1].
+              </li>
+              <li>
+                Any temporary restriction of rights shall be lawful, necessary,
+                proportionate, and limited to the duration of the
+                emergency[cite: 1].
+              </li>
+              <li>
+                The government shall not use emergency powers to punish
+                political opposition or prevent lawful criticism of the
+                government[cite: 1].
+              </li>
+              <li>
+                All emergency measures shall cease when the emergency has ended
+                or when the lawful authority responsible for the declaration
+                terminates them[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: BOOK II -->
+      <div id="tab-book2" class="tab-content legal-doc">
+        <div
+          class="text-center pb-8 mb-8"
+          style="border-bottom: 2px solid var(--navy-accent, #112240)"
+        >
+          <h2
+            class="text-3xl font-bold uppercase tracking-widest mb-4"
+            style="color: var(--navy-deep, #071322)"
+          >
+            Book II - Civil & Personal Law[cite: 1]
+          </h2>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 1: General Civil Principles[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Purpose and Application[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                This Book establishes the laws governing civil relationships,
+                personal rights, property, contracts, family matters,
+                inheritance, and disputes between private persons and
+                organizations[cite: 1].
+              </li>
+              <li>
+                Civil law shall be interpreted consistently with the
+                Constitution of Penland and other applicable laws[cite: 1].
+              </li>
+              <li>
+                All persons shall have equal standing before the civil law[cite:
+                1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Legal Capacity[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Every person shall have legal personality and shall be capable
+                of holding rights and obligations under the law[cite: 1].
+              </li>
+              <li>
+                The capacity of a person to enter contracts, manage property, or
+                undertake other legal acts may be limited by law where necessary
+                to protect minors or persons unable to make legally binding
+                decisions[cite: 1].
+              </li>
+              <li>
+                No limitation of legal capacity shall remove a person's
+                fundamental rights under the Constitution[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Good Faith[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Persons exercising civil rights shall act in good faith and
+                shall not knowingly abuse rights granted by law[cite: 1].
+              </li>
+              <li>
+                Agreements and legal relationships shall be performed honestly
+                and in accordance with their lawful terms[cite: 1].
+              </li>
+              <li>
+                Courts may provide remedies where a person's lawful rights have
+                been deliberately abused to cause unlawful harm to another
+                person[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 2: Contracts and Agreements[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Formation of Contracts[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A contract shall be legally binding when the parties have
+                reached a lawful agreement and have satisfied any formal
+                requirements established by law[cite: 1].
+              </li>
+              <li>
+                A contract shall require genuine consent from the parties[cite:
+                1].
+              </li>
+              <li>
+                A contract entered into through fraud, coercion, or unlawful
+                threats may be declared invalid by a court[cite: 1].
+              </li>
+              <li>
+                Contracts involving unlawful activities shall have no legal
+                effect[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Performance of Contracts[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Parties to a valid contract shall fulfill their obligations
+                according to its terms[cite: 1].
+              </li>
+              <li>
+                A party that fails to perform a contractual obligation without
+                lawful justification may be liable for damages or other remedies
+                established by law[cite: 1].
+              </li>
+              <li>
+                A person shall not be required to perform a contractual
+                obligation that has become unlawful[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Consumer Contracts[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Businesses shall provide consumers with clear and accurate
+                information concerning goods and services[cite: 1].
+              </li>
+              <li>
+                A business shall not use deliberately misleading or fraudulent
+                terms in a consumer contract[cite: 1].
+              </li>
+              <li>
+                The law may provide additional protections for consumers
+                entering contracts with businesses[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Remedies for Breach[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A court may order compensation, specific performance,
+                cancellation of a contract, or another lawful remedy where a
+                contract has been breached[cite: 1].
+              </li>
+              <li>
+                Compensation shall generally seek to restore the injured party
+                to the position they would reasonably have occupied had the
+                contract been properly performed[cite: 1].
+              </li>
+              <li>
+                Punitive damages may only be awarded where expressly authorized
+                by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 3: Property and Ownership[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Right to Property[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Every person has the right to lawfully own, use, and transfer
+                property[cite: 1].
+              </li>
+              <li>
+                No person shall be unlawfully deprived of their property[cite:
+                1].
+              </li>
+              <li>
+                Property rights shall be subject to reasonable restrictions
+                established by law for the protection of public safety, public
+                order, or the rights of others[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Private Property[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A lawful owner shall have the right to possess, use, sell,
+                lease, or otherwise dispose of their property[cite: 1].
+              </li>
+              <li>
+                No person shall interfere with another person's property without
+                lawful authority or the owner's consent[cite: 1].
+              </li>
+              <li>
+                Property disputes shall be resolved by the appropriate civil
+                courts[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Government Acquisition of Property[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government may acquire private property for a legitimate
+                public purpose where authorized by law[cite: 1].
+              </li>
+              <li>
+                A person whose property is lawfully acquired by the government
+                shall receive fair compensation according to procedures
+                established by law[cite: 1].
+              </li>
+              <li>
+                Property shall not be acquired for an unlawful or purely
+                arbitrary purpose[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Lost and Abandoned Property[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A person who finds property belonging to another shall make
+                reasonable efforts to return it to its lawful owner[cite: 1].
+              </li>
+              <li>
+                Property that remains unclaimed may be dealt with according to
+                procedures established by law[cite: 1].
+              </li>
+              <li>
+                A person who knowingly keeps property belonging to another
+                without lawful justification may be subject to civil or criminal
+                liability[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 4: Land and Real Property[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Ownership of Land[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Land may be privately or publicly owned according to the laws of
+                Penland[cite: 1].
+              </li>
+              <li>
+                Ownership of land shall include the rights and responsibilities
+                established by law[cite: 1].
+              </li>
+              <li>
+                The government may establish reasonable planning, environmental,
+                and safety regulations governing the use of land[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Leases and Tenancies[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A landlord and tenant may establish a lawful agreement governing
+                the occupation and use of property[cite: 1].
+              </li>
+              <li>
+                Landlords shall provide premises that meet minimum safety and
+                habitability standards established by law[cite: 1].
+              </li>
+              <li>
+                Tenants shall comply with lawful terms of their tenancy and
+                shall take reasonable care of rented property[cite: 1].
+              </li>
+              <li>
+                No person shall be unlawfully evicted from their lawful
+                residence[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Neighbouring Property[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Property owners shall use their property in a manner that does
+                not unlawfully interfere with the rights or reasonable enjoyment
+                of neighbouring properties[cite: 1].
+              </li>
+              <li>
+                The law may establish rules concerning noise, pollution,
+                boundaries, access, drainage, and other disputes between
+                neighbouring properties[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 5: Family and Personal Relationships[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Marriage[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Marriage shall be a voluntary legal relationship entered into by
+                consenting adults according to procedures established by
+                law[cite: 1].
+              </li>
+              <li>No person shall be forced into marriage[cite: 1].</li>
+              <li>
+                The law shall establish procedures for the registration and
+                dissolution of marriage[cite: 1].
+              </li>
+              <li>
+                Married persons shall have equal legal status within the
+                marriage[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Divorce[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A marriage may be dissolved according to procedures established
+                by law[cite: 1].
+              </li>
+              <li>
+                Divorce proceedings shall be conducted fairly and without
+                unlawful discrimination[cite: 1].
+              </li>
+              <li>
+                Courts may make lawful orders concerning property, financial
+                support, and children following the dissolution of a
+                marriage[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Children[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Children shall have the right to protection, care, education,
+                and support[cite: 1].
+              </li>
+              <li>
+                Parents and legal guardians shall have responsibilities for the
+                welfare and development of children under their care[cite: 1].
+              </li>
+              <li>
+                The government may intervene where necessary to protect a child
+                from serious abuse, neglect, exploitation, or other substantial
+                harm[cite: 1].
+              </li>
+              <li>
+                Decisions concerning children shall give primary consideration
+                to their welfare and best interests[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Guardianship[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A legal guardian may be appointed where a person is unable to
+                manage their own affairs as provided by law[cite: 1].
+              </li>
+              <li>
+                Guardians shall act in the best interests of the person under
+                their care[cite: 1].
+              </li>
+              <li>
+                Courts may review or terminate guardianship where circumstances
+                change[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 6: Personal Injury and Civil Liability[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Liability for Harm[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A person who unlawfully causes harm to another may be liable for
+                the resulting damage[cite: 1].
+              </li>
+              <li>
+                Liability may arise from intentional conduct, negligence, or
+                other circumstances established by law[cite: 1].
+              </li>
+              <li>
+                A person shall not be liable where the law recognizes a valid
+                defense or justification[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Compensation[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A person who suffers legally recognized harm may seek
+                compensation through the civil courts[cite: 1].
+              </li>
+              <li>
+                Compensation may include financial losses, medical expenses,
+                property damage, and other losses recognized by law[cite: 1].
+              </li>
+              <li>
+                Courts may consider the circumstances of the harm when
+                determining an appropriate remedy[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Negligence[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A person shall exercise reasonable care where their actions may
+                foreseeably cause harm to another[cite: 1].
+              </li>
+              <li>
+                A person who fails to exercise reasonable care and thereby
+                causes legally recognized harm may be liable for damages[cite:
+                1].
+              </li>
+              <li>
+                The extent of liability shall be determined according to the
+                circumstances of each case[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 7: Inheritance and Estates[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Right of Inheritance[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A person may lawfully transfer property to others upon their
+                death[cite: 1].
+              </li>
+              <li>
+                Every person shall have the right to create a lawful will
+                according to procedures established by law[cite: 1].
+              </li>
+              <li>
+                Property not disposed of through a valid will shall be
+                distributed according to the laws of inheritance[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Wills[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A will shall be legally recognized when created according to the
+                formal requirements established by law[cite: 1].
+              </li>
+              <li>
+                A will created through fraud, coercion, or incapacity may be
+                challenged before a court[cite: 1].
+              </li>
+              <li>
+                Courts may invalidate all or part of a will where required by
+                law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Estate Administration[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The estate of a deceased person shall be administered according
+                to law[cite: 1].
+              </li>
+              <li>
+                Lawful debts and obligations of the deceased may be settled from
+                the estate before remaining property is distributed[cite: 1].
+              </li>
+              <li>
+                Disputes concerning estates shall be determined by the
+                appropriate civil court[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 8: Consumer Protection[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Consumer Rights[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Consumers shall have the right to receive accurate information
+                concerning goods and services[cite: 1].
+              </li>
+              <li>
+                Businesses shall not engage in fraudulent, deceptive, or
+                deliberately misleading commercial practices[cite: 1].
+              </li>
+              <li>
+                Consumers shall have access to lawful remedies where goods or
+                services fail to meet legally required standards[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Product Safety[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Goods offered for public sale shall meet safety standards
+                established by law[cite: 1].
+              </li>
+              <li>
+                A business that knowingly sells dangerous or unlawfully
+                defective goods may be subject to civil or criminal
+                penalties[cite: 1].
+              </li>
+              <li>
+                The government may require unsafe goods to be recalled or
+                removed from sale[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Unfair Commercial Practices[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Businesses shall not use deceptive advertising or intentionally
+                misleading representations[cite: 1].
+              </li>
+              <li>
+                Unfair contract terms may be declared unenforceable according to
+                procedures established by law[cite: 1].
+              </li>
+              <li>
+                The government may establish agencies responsible for enforcing
+                consumer protection laws[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 9: Civil Disputes and Courts[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Right to Civil Justice[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Every person shall have the right to seek a lawful remedy
+                through the civil courts[cite: 1].
+              </li>
+              <li>
+                Civil disputes shall be heard by independent and impartial
+                courts[cite: 1].
+              </li>
+              <li>
+                No person shall be denied access to justice solely because of
+                their wealth or social status[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Alternative Dispute Resolution[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Parties to a civil dispute may voluntarily resolve their dispute
+                through mediation, arbitration, or other lawful methods[cite:
+                1].
+              </li>
+              <li>
+                Agreements reached through lawful alternative dispute resolution
+                may be enforceable by a court[cite: 1].
+              </li>
+              <li>
+                No person shall be forced into arbitration where the law
+                requires judicial determination[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Civil Judgments[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A final judgment of a competent civil court shall be binding
+                upon the parties to the case[cite: 1].
+              </li>
+              <li>
+                Courts may order compensation, injunctions, specific
+                performance, declarations, or other lawful remedies[cite: 1].
+              </li>
+              <li>
+                Civil judgments may be appealed according to procedures
+                established by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 10: Privacy and Personal Autonomy[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Protection of Personal Information[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Every person shall have the right to reasonable protection of
+                their personal information[cite: 1].
+              </li>
+              <li>
+                Organizations and public authorities that collect personal
+                information shall use and protect that information according to
+                law[cite: 1].
+              </li>
+              <li>
+                Personal information shall not be unlawfully collected,
+                disclosed, or used[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Personal Autonomy[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Every person shall have the right to make lawful decisions
+                concerning their own private life[cite: 1].
+              </li>
+              <li>
+                Government interference with personal autonomy shall require a
+                lawful and legitimate purpose[cite: 1].
+              </li>
+              <li>
+                The exercise of personal autonomy shall not authorize conduct
+                that unlawfully harms or infringes upon the rights of
+                others[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Remedies for Violations[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A person whose civil rights have been unlawfully violated may
+                seek a remedy through the courts[cite: 1].
+              </li>
+              <li>
+                Courts may order compensation, injunctions, or other appropriate
+                remedies established by law[cite: 1].
+              </li>
+              <li>
+                Nothing in this Section shall limit protections provided by the
+                Constitution or criminal law[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: BOOK III -->
+      <div id="tab-book3" class="tab-content legal-doc">
+        <div
+          class="text-center pb-8 mb-8"
+          style="border-bottom: 2px solid var(--navy-accent, #112240)"
+        >
+          <h2
+            class="text-3xl font-bold uppercase tracking-widest mb-4"
+            style="color: var(--navy-deep, #071322)"
+          >
+            Book III - Economic, Social & Environmental Law[cite: 1]
+          </h2>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 1: General Economic Principles[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Economic Freedom[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The Republic of Penland shall maintain a free and lawful economy
+                in which persons may engage in trade, employment, investment,
+                and enterprise[cite: 1].
+              </li>
+              <li>
+                Every person shall have the right to pursue lawful economic
+                activity, subject to reasonable regulations established by
+                law[cite: 1].
+              </li>
+              <li>
+                The government shall not arbitrarily interfere with lawful
+                economic activity[cite: 1].
+              </li>
+              <li>
+                Economic activity shall be conducted in accordance with the
+                rights of others and the laws of Penland[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Fair Competition[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>Businesses shall compete fairly and lawfully[cite: 1].</li>
+              <li>
+                Agreements or practices intended to unlawfully restrict
+                competition may be prohibited by law[cite: 1].
+              </li>
+              <li>
+                The government may regulate monopolies and other dominant
+                economic positions where necessary to protect competition and
+                the public interest[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Economic Regulation[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government may establish regulations necessary to protect
+                consumers, workers, public safety, financial stability, and the
+                environment[cite: 1].
+              </li>
+              <li>
+                Economic regulations shall be reasonable, proportionate, and
+                consistent with the Constitution[cite: 1].
+              </li>
+              <li>
+                Businesses shall comply with lawful licensing, safety,
+                reporting, and regulatory requirements[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 2: Businesses and Corporations[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Formation of Businesses[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Persons may establish businesses and other lawful economic
+                organizations according to procedures established by law[cite:
+                1].
+              </li>
+              <li>
+                A business shall obtain any license or registration required by
+                law before conducting activities for which such authorization is
+                required[cite: 1].
+              </li>
+              <li>
+                Businesses shall have the legal rights and responsibilities
+                established by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Corporations[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A corporation established under the laws of Penland shall have a
+                legal identity separate from its owners and shareholders[cite:
+                1].
+              </li>
+              <li>
+                The rights and responsibilities of corporations shall be
+                established by law[cite: 1].
+              </li>
+              <li>
+                Corporate officers and directors may be held personally
+                responsible for unlawful conduct where provided by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Business Records[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Businesses shall maintain accurate financial and legal records
+                as required by law[cite: 1].
+              </li>
+              <li>
+                Businesses shall provide information to lawful government
+                authorities where required by law[cite: 1].
+              </li>
+              <li>
+                Government access to private business information shall remain
+                subject to applicable privacy and legal protections[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Bankruptcy and Insolvency[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The law shall establish procedures for businesses and
+                individuals who are unable to meet their lawful financial
+                obligations[cite: 1].
+              </li>
+              <li>
+                Insolvency proceedings shall seek a fair resolution between
+                debtors and creditors[cite: 1].
+              </li>
+              <li>
+                A person or business shall not be imprisoned solely for
+                inability to pay a civil debt[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 3: Employment and Workers[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Right to Employment[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Every person shall have the right to seek and engage in lawful
+                employment[cite: 1].
+              </li>
+              <li>
+                Employers shall not unlawfully discriminate against employees or
+                applicants on grounds protected by the Constitution or law[cite:
+                1].
+              </li>
+              <li>
+                Employment relationships shall be governed by contracts and
+                applicable employment laws[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Wages and Working Conditions[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Employees shall receive wages and benefits required by law or
+                their lawful employment agreements[cite: 1].
+              </li>
+              <li>
+                Employers shall provide reasonably safe and healthy working
+                conditions[cite: 1].
+              </li>
+              <li>
+                The government may establish minimum standards concerning wages,
+                working hours, rest periods, leave, and workplace safety[cite:
+                1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Workplace Safety[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Employers shall take reasonable measures to protect workers from
+                foreseeable workplace hazards[cite: 1].
+              </li>
+              <li>
+                Workers shall have the right to report serious safety concerns
+                without unlawful retaliation[cite: 1].
+              </li>
+              <li>
+                Employers who knowingly violate serious workplace safety
+                requirements may be subject to penalties established by
+                law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Workers' Organizations[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Workers shall have the right to peacefully form or join lawful
+                workers' organizations[cite: 1].
+              </li>
+              <li>
+                Workers shall not be unlawfully punished for participating in
+                lawful collective activities[cite: 1].
+              </li>
+              <li>
+                The law may establish procedures governing collective bargaining
+                and industrial action[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 5: Termination of Employment[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Employment may be terminated according to the terms of a lawful
+                contract and applicable employment laws[cite: 1].
+              </li>
+              <li>
+                An employer shall not unlawfully dismiss an employee in
+                retaliation for exercising a protected legal right[cite: 1].
+              </li>
+              <li>
+                The law may establish minimum notice, severance, and
+                dispute-resolution requirements[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 4: Taxation and Public Finance[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Authority to Tax[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Taxes shall be imposed only under authority granted by law[cite:
+                1].
+              </li>
+              <li>
+                No person shall be required to pay a tax that has not been
+                lawfully established[cite: 1].
+              </li>
+              <li>
+                Tax laws shall apply fairly and consistently to persons in
+                comparable circumstances[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Tax Administration[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government shall maintain lawful institutions responsible
+                for administering and collecting taxes[cite: 1].
+              </li>
+              <li>
+                Tax authorities shall exercise their powers fairly,
+                transparently, and according to law[cite: 1].
+              </li>
+              <li>
+                Persons subject to taxation shall have access to procedures for
+                challenging assessments and decisions made by tax
+                authorities[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Public Funds[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Public money shall be collected, held, and spent only for lawful
+                public purposes[cite: 1].
+              </li>
+              <li>
+                Government expenditure shall be authorized through procedures
+                established by the Constitution and law[cite: 1].
+              </li>
+              <li>
+                Public financial records shall be maintained accurately and
+                shall be subject to lawful oversight[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Financial Accountability[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government shall maintain independent mechanisms for
+                auditing public finances[cite: 1].
+              </li>
+              <li>
+                Public officials who knowingly misuse public funds may be
+                subject to civil, disciplinary, or criminal proceedings[cite:
+                1].
+              </li>
+              <li>
+                The government shall publish appropriate financial information
+                to promote transparency and accountability[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 5: Banking and Financial Services[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Financial Institutions[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Banks and other financial institutions operating within Penland
+                shall comply with licensing, reporting, and regulatory
+                requirements established by law[cite: 1].
+              </li>
+              <li>
+                Financial institutions shall maintain reasonable measures to
+                protect customer funds and information[cite: 1].
+              </li>
+              <li>
+                The government may establish an independent authority to
+                supervise financial institutions[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Financial Fraud[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Fraudulent manipulation of financial systems, accounts,
+                investments, or transactions shall be prohibited[cite: 1].
+              </li>
+              <li>
+                Persons who knowingly use financial institutions to conceal or
+                transfer proceeds of criminal activity may be subject to
+                criminal penalties[cite: 1].
+              </li>
+              <li>
+                Financial institutions shall report transactions where required
+                by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Consumer Financial Protection[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Financial institutions shall provide customers with clear
+                information concerning fees, interest, obligations, and
+                significant risks[cite: 1].
+              </li>
+              <li>
+                Customers shall have access to lawful procedures for resolving
+                financial disputes[cite: 1].
+              </li>
+              <li>
+                Unfair or deliberately deceptive financial practices may be
+                prohibited by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 6: Trade and Commerce[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Domestic Trade[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Persons and businesses may engage in lawful trade throughout the
+                Republic[cite: 1].
+              </li>
+              <li>
+                No region or local authority shall unlawfully restrict lawful
+                trade between regions of Penland[cite: 1].
+              </li>
+              <li>
+                Reasonable regulations may be established for health, safety,
+                environmental protection, and consumer protection[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: International Trade[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government may regulate the import and export of goods and
+                services[cite: 1].
+              </li>
+              <li>
+                Customs duties and other charges on international trade shall be
+                established by law[cite: 1].
+              </li>
+              <li>
+                Imports and exports may be restricted where necessary to protect
+                national security, public safety, public health, or the
+                environment[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Commercial Standards[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Goods and services offered for commercial purposes shall meet
+                standards established by law[cite: 1].
+              </li>
+              <li>
+                Businesses shall not knowingly misrepresent the origin, quality,
+                quantity, or characteristics of goods or services[cite: 1].
+              </li>
+              <li>
+                The government may establish inspection and certification
+                systems for regulated goods[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 7: Healthcare and Public Health[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Public Health[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The Republic shall promote the health and wellbeing of its
+                population[cite: 1].
+              </li>
+              <li>
+                The government may establish public health institutions and
+                programs[cite: 1].
+              </li>
+              <li>
+                Public health measures shall be based on lawful authority and
+                shall respect the rights and dignity of individuals[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Healthcare Services[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government shall establish or support access to essential
+                healthcare services according to laws and public policy[cite:
+                1].
+              </li>
+              <li>
+                Healthcare providers shall meet professional, safety, and
+                licensing standards established by law[cite: 1].
+              </li>
+              <li>
+                Patients shall be treated with dignity and shall receive
+                information relevant to decisions concerning their care, subject
+                to lawful limitations[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Public Health Emergencies[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government may take temporary measures to respond to serious
+                threats to public health[cite: 1].
+              </li>
+              <li>
+                Such measures shall be lawful, necessary, proportionate, and
+                limited to the duration of the threat[cite: 1].
+              </li>
+              <li>
+                Public health emergencies shall remain subject to the
+                constitutional protections and emergency procedures of
+                Penland[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 8: Education and Social Services[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Education[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Every citizen shall have access to education as provided by the
+                Constitution and laws of Penland[cite: 1].
+              </li>
+              <li>
+                The government shall establish standards for schools and
+                educational institutions[cite: 1].
+              </li>
+              <li>
+                Educational institutions shall promote literacy, knowledge,
+                creativity, critical thinking, and responsible civic
+                participation[cite: 1].
+              </li>
+              <li>
+                The government may provide public funding for education
+                according to law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Higher and Vocational Education[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The Republic shall support access to higher, technical, and
+                vocational education[cite: 1].
+              </li>
+              <li>
+                Universities and other higher education institutions may
+                maintain appropriate academic independence subject to law[cite:
+                1].
+              </li>
+              <li>
+                Educational qualifications shall be awarded according to
+                standards established by the relevant authorities[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Social Services[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government may establish programs providing assistance to
+                persons experiencing poverty, unemployment, disability,
+                homelessness, or other significant hardship[cite: 1].
+              </li>
+              <li>
+                Eligibility for publicly funded social services shall be
+                established by law[cite: 1].
+              </li>
+              <li>
+                Public assistance programs shall be administered fairly and
+                transparently[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 9: Housing, Infrastructure and Transport[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Housing[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government may establish laws and programs promoting safe
+                and adequate housing[cite: 1].
+              </li>
+              <li>
+                Residential buildings shall comply with health, safety, and
+                construction standards established by law[cite: 1].
+              </li>
+              <li>
+                Landlords and tenants shall retain the rights established under
+                Book II of this Code[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Infrastructure[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The Republic and its lawful subdivisions may construct,
+                maintain, and regulate public infrastructure[cite: 1].
+              </li>
+              <li>
+                Public infrastructure shall be maintained according to
+                reasonable standards of safety, accessibility, and
+                reliability[cite: 1].
+              </li>
+              <li>
+                Infrastructure projects involving significant public funds shall
+                be subject to appropriate financial and environmental
+                oversight[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Transportation[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government may regulate roads, railways, public
+                transportation, aviation, maritime transportation, and other
+                forms of transport[cite: 1].
+              </li>
+              <li>
+                Vehicles and operators may be subject to licensing,
+                registration, inspection, and safety requirements[cite: 1].
+              </li>
+              <li>
+                Transportation regulations shall seek to protect public safety
+                while maintaining reasonable freedom of movement[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 10: Environmental Protection[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Protection of the Environment[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The Republic shall protect the natural environment and promote
+                the responsible use of natural resources[cite: 1].
+              </li>
+              <li>
+                Government institutions and private persons shall comply with
+                environmental standards established by law[cite: 1].
+              </li>
+              <li>
+                Activities that create significant environmental risks may be
+                subject to licensing, monitoring, or restrictions[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Pollution and Waste[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The unlawful release of substances that cause significant harm
+                to people or the environment shall be prohibited[cite: 1].
+              </li>
+              <li>
+                The government may establish standards governing air, water,
+                soil, noise, and other forms of pollution[cite: 1].
+              </li>
+              <li>
+                The production, transportation, storage, and disposal of
+                hazardous materials shall be regulated by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Natural Resources[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The natural resources of Penland shall be managed in the public
+                interest and in accordance with the law[cite: 1].
+              </li>
+              <li>
+                The government may authorize the extraction or use of natural
+                resources subject to appropriate environmental and safety
+                requirements[cite: 1].
+              </li>
+              <li>
+                Persons or businesses responsible for significant environmental
+                damage may be required to restore or compensate for the damage
+                according to law[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 4: Conservation[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government may establish protected areas for the
+                conservation of ecosystems, wildlife, forests, waterways, and
+                areas of cultural or natural significance[cite: 1].
+              </li>
+              <li>
+                The hunting, fishing, harvesting, or trade of protected species
+                may be restricted or prohibited by law[cite: 1].
+              </li>
+              <li>
+                Conservation policies shall seek to balance environmental
+                protection with the lawful use of natural resources[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 11: Energy and Public Utilities[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Energy[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government shall establish standards governing the
+                production, distribution, and use of energy[cite: 1].
+              </li>
+              <li>
+                Energy providers shall maintain reasonable standards of safety
+                and reliability[cite: 1].
+              </li>
+              <li>
+                The development of energy resources shall comply with applicable
+                environmental and public safety requirements[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Public Utilities[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Essential public utilities may include water, electricity, gas,
+                telecommunications, waste management, and other services
+                established by law[cite: 1].
+              </li>
+              <li>
+                Providers of essential public utilities shall meet standards of
+                safety, reliability, and service established by law[cite: 1].
+              </li>
+              <li>
+                The government may regulate utility prices and service
+                conditions where necessary to protect the public interest[cite:
+                1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Universal Access[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government may establish programs to ensure reasonable
+                access to essential public utilities throughout Penland[cite:
+                1].
+              </li>
+              <li>
+                Public utility policies shall seek to prevent unreasonable
+                discrimination between communities or regions[cite: 1].
+              </li>
+              <li>
+                Utility providers may be required to maintain emergency plans
+                and continuity of service for critical infrastructure[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legal-section">
+          <h3>Section 12: Economic and Environmental Enforcement[cite: 1]</h3>
+          <div class="legal-article">
+            <h4>Article 1: Regulatory Authorities[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                The government may establish independent or specialized
+                authorities to administer and enforce economic, social, and
+                environmental laws[cite: 1].
+              </li>
+              <li>
+                Regulatory authorities shall exercise their powers according to
+                law and shall remain subject to appropriate oversight[cite: 1].
+              </li>
+              <li>
+                Regulatory decisions shall be subject to lawful review[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 2: Civil and Administrative Penalties[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                A person or organization that violates economic, social, or
+                environmental regulations may be subject to fines, restrictions,
+                license suspension, or other lawful penalties[cite: 1].
+              </li>
+              <li>
+                Administrative penalties shall be proportionate to the
+                seriousness of the violation[cite: 1].
+              </li>
+              <li>
+                A person or organization subject to an administrative penalty
+                shall have access to procedures for challenging the
+                decision[cite: 1].
+              </li>
+            </ul>
+          </div>
+          <div class="legal-article">
+            <h4>Article 3: Criminal Offences[cite: 1]</h4>
+            <ul class="list-decimal pl-6 legal-list">
+              <li>
+                Serious violations of economic, public health, workplace safety,
+                or environmental laws may constitute criminal offences where
+                expressly established by law[cite: 1].
+              </li>
+              <li>
+                Criminal prosecution shall be conducted according to Book I and
+                the Constitution[cite: 1].
+              </li>
+              <li>
+                Civil, administrative, and criminal remedies may apply to the
+                same conduct where separately authorized by law[cite: 1].
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="text-white py-16 px-6 text-sm"
+      style="
+        background-color: var(--navy-deep, #071322);
+        border-top: 8px solid var(--navy-accent, #112240);
+      "
+    >
+      <div class="max-w-7xl mx-auto text-center">
+        <p class="text-gray-300">
+          © 2026 The Government of the Republic of Penland. Legal framework
+          established via National Archives.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Tab Switching JavaScript -->
+    <script>
+      function openTab(evt, tabName) {
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+          tabContents[i].style.display = "none";
+          tabContents[i].classList.remove("active");
+        }
+        var tabBtns = document.getElementsByClassName("tab-btn");
+        for (var i = 0; i < tabBtns.length; i++) {
+          tabBtns[i].classList.remove("active");
+        }
+        document.getElementById(tabName).style.display = "block";
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+      }
+    </script>
+  </body>
+</html>

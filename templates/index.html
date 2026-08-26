@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Penland Government</title>
+    <!-- Tailwind CSS for layout structure -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Merriweather for official headings, Inter for body text -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LINK TO YOUR CUSTOM CSS FILE -->
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Merriweather", "serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .serif-text {
+        font-family: "Merriweather", serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 antialiased">
+    <!-- Top Accessibility Bar -->
+    <div
+      class="text-white text-xs py-2 px-6 flex justify-between items-center"
+      style="background-color: var(--navy-deep, #071322)"
+    >
+      <div class="space-x-4">
+        <span class="font-semibold"
+          >🏛️ An Official Website of the Penland Government</span
+        >
+      </div>
+      <div class="space-x-4 flex items-center">
+        <a href="#" class="hover:underline">High Contrast</a>
+        <a href="#" class="hover:underline">Language: EN</a>
+      </div>
+    </div>
+
+    <!-- Main Navigation (Styled with your custom CSS variables) -->
+    <header
+      class="sticky top-0 bg-white z-50 shadow-sm"
+      style="border-bottom: 4px solid var(--navy-deep, #071322)"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center"
+      >
+        <!-- Logo / Seal -->
+        <a href="/" class="flex items-center space-x-4">
+          <img
+            src="/static/Republic of penland seal.jpe"
+            alt="Official Seal of Penland"
+            class="w-14 h-14 object-contain"
+          />
+          <div class="flex flex-col">
+            <span
+              class="text-2xl font-bold uppercase tracking-widest serif-text"
+              style="color: var(--navy-deep, #071322)"
+              >Penland</span
+            >
+            <span
+              class="text-sm tracking-wider text-gray-600 uppercase font-semibold"
+              >Government</span
+            >
+          </div>
+        </a>
+
+        <!-- Dynamic Flask Nav Links -->
+        <nav
+          class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide"
+        >
+          <a
+            href="/"
+            class="transition-colors pb-1"
+            style="color: var(--navy-deep, #071322)"
+            >Home</a
+          >
+          <a
+            href="/laws"
+            class="transition-colors pb-1 text-gray-600 hover:text-black"
+            >Laws & Decrees</a
+          >
+          <a
+            href="/services"
+            class="transition-colors pb-1 text-gray-600 hover:text-black"
+            >Citizen Services</a
+          >
+          <a
+            href="/contact"
+            class="transition-colors pb-1 text-gray-600 hover:text-black"
+            >Contact Us</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="text-white py-32 px-6 relative overflow-hidden flex flex-col items-center text-center shadow-lg"
+      style="
+        background-color: var(--navy-deep, #071322);
+        border-bottom: 8px solid var(--navy-accent, #112240);
+      "
+    >
+      <!-- Abstract background pattern -->
+      <div
+        class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"
+      ></div>
+
+      <div class="relative z-10 max-w-3xl">
+        <h1
+          class="text-5xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-md"
+        >
+          Moving Penland Forward
+        </h1>
+        <p class="text-lg md:text-xl font-light mb-10 text-gray-300">
+          Official announcements, policies, and updates from the Grand Council
+          and Office of the President.
+        </p>
+        <a
+          href="/laws"
+          class="gold-button text-white px-8 py-4 text-sm font-bold uppercase tracking-wider transition duration-300 shadow-lg inline-block rounded"
+          style="
+            background-color: var(--navy-accent, #112240);
+            border: 1px solid var(--neutral-highlight, #38bdf8);
+          "
+          >Read the Latest Decrees</a
+        >
+      </div>
+    </section>
+
+    <!-- Briefing Room / Latest News -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+      <div
+        class="flex justify-between items-end mb-10 border-b-2 border-gray-200 pb-4"
+      >
+        <h2 class="text-4xl font-bold" style="color: var(--navy-deep, #071322)">
+          The Briefing Room
+        </h2>
+        <a
+          href="#"
+          class="font-semibold hover:underline"
+          style="color: var(--navy-deep, #071322)"
+          >View All News &rarr;</a
+        >
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <article class="group cursor-pointer">
+          <p
+            class="text-xs text-gray-500 font-bold uppercase tracking-wide mb-2"
+          >
+            Press Release • Today
+          </p>
+          <h3
+            class="text-xl font-bold mb-3 transition-colors"
+            style="color: var(--navy-deep, #071322)"
+          >
+            Statement from the President on the New Infrastructure Bill
+          </h3>
+          <p class="text-gray-600 text-sm">
+            A comprehensive plan to rebuild Penland's highways, bridges, and
+            digital networks over the next decade.
+          </p>
+        </article>
+
+        <article class="group cursor-pointer">
+          <p
+            class="text-xs text-gray-500 font-bold uppercase tracking-wide mb-2"
+          >
+            Speeches • Yesterday
+          </p>
+          <h3
+            class="text-xl font-bold mb-3 transition-colors"
+            style="color: var(--navy-deep, #071322)"
+          >
+            Remarks by the Vice President on Economic Growth
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Addressing the national chamber of commerce on job creation and
+            reducing inflation.
+          </p>
+        </article>
+
+        <article class="group cursor-pointer">
+          <p
+            class="text-xs text-gray-500 font-bold uppercase tracking-wide mb-2"
+          >
+            Fact Sheet • This Week
+          </p>
+          <h3
+            class="text-xl font-bold mb-3 transition-colors"
+            style="color: var(--navy-deep, #071322)"
+          >
+            Penland's Commitment to Clean Energy Initiatives
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Key deliverables and timeline for reaching zero emissions by the
+            target year.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Government Priorities Section -->
+    <section class="bg-gray-100 py-20 px-6 border-t border-gray-200">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2
+          class="text-4xl mb-12 font-bold"
+          style="color: var(--navy-deep, #071322)"
+        >
+          Government Priorities
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <a
+            href="#"
+            class="bg-white p-8 border-t-4 border-transparent shadow-sm hover:shadow-lg transition-all"
+            style="border-top-color: var(--navy-accent, #112240)"
+          >
+            <h3
+              class="text-2xl mb-4 font-bold"
+              style="color: var(--navy-deep, #071322)"
+            >
+              Economy
+            </h3>
+            <p class="text-sm text-gray-600">
+              Fostering innovation, creating jobs, and building a resilient
+              financial future.
+            </p>
+          </a>
+
+          <a
+            href="#"
+            class="bg-white p-8 border-t-4 border-transparent shadow-sm hover:shadow-lg transition-all"
+            style="border-top-color: var(--navy-accent, #112240)"
+          >
+            <h3
+              class="text-2xl mb-4 font-bold"
+              style="color: var(--navy-deep, #071322)"
+            >
+              Healthcare
+            </h3>
+            <p class="text-sm text-gray-600">
+              Ensuring accessible, affordable, and high-quality medical care for
+              all citizens.
+            </p>
+          </a>
+
+          <a
+            href="#"
+            class="bg-white p-8 border-t-4 border-transparent shadow-sm hover:shadow-lg transition-all"
+            style="border-top-color: var(--navy-accent, #112240)"
+          >
+            <h3
+              class="text-2xl mb-4 font-bold"
+              style="color: var(--navy-deep, #071322)"
+            >
+              Security
+            </h3>
+            <p class="text-sm text-gray-600">
+              Protecting the homeland and strengthening our alliances abroad.
+            </p>
+          </a>
+
+          <a
+            href="#"
+            class="bg-white p-8 border-t-4 border-transparent shadow-sm hover:shadow-lg transition-all"
+            style="border-top-color: var(--navy-accent, #112240)"
+          >
+            <h3
+              class="text-2xl mb-4 font-bold"
+              style="color: var(--navy-deep, #071322)"
+            >
+              Education
+            </h3>
+            <p class="text-sm text-gray-600">
+              Investing in our schools, teachers, and the next generation of
+              leaders.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="text-white py-16 px-6 text-sm"
+      style="
+        background-color: var(--navy-deep, #071322);
+        border-top: 8px solid var(--navy-accent, #112240);
+      "
+    >
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center space-x-4 mb-6">
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-xs"
+              style="
+                background-color: var(--navy-accent, #112240);
+                color: var(--text-primary, #f8fafc);
+              "
+            >
+              SEAL
+            </div>
+            <span class="text-xl font-bold uppercase tracking-widest serif-text"
+              >Penland Government</span
+            >
+          </div>
+          <p class="text-gray-300 max-w-xs">
+            1000 Capital Avenue<br />Penland City, PC 00001
+          </p>
+        </div>
+
+        <div>
+          <h4
+            class="font-bold uppercase tracking-wider mb-4"
+            style="color: var(--neutral-highlight, #38bdf8)"
+          >
+            Explore
+          </h4>
+          <ul class="space-y-2 text-gray-300">
+            <li>
+              <a href="/" class="hover:text-white transition-colors">Home</a>
+            </li>
+            <li>
+              <a href="/laws" class="hover:text-white transition-colors"
+                >Laws & Decrees</a
+              >
+            </li>
+            <li>
+              <a href="/services" class="hover:text-white transition-colors"
+                >Citizen Services</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4
+            class="font-bold uppercase tracking-wider mb-4"
+            style="color: var(--neutral-highlight, #38bdf8)"
+          >
+            About
+          </h4>
+          <ul class="space-y-2 text-gray-300">
+            <li>
+              <a href="#" class="hover:text-white transition-colors"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="/contact" class="hover:text-white transition-colors"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
